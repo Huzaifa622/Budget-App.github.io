@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popup" id="popup">
+        <div class="budgetform">
+            <h1>Adding Budget</h1>
+            <p class="hide" id="budgetAmountError">
+                Please Enter correct ammount
+            </p>
+            <input type="number" class="budgtvalue" id="budgtvalue"  placeholder="Enter budget">
+            <button class="addBudget" id="addBudget" >Set budget</button>
+        </div>
+    </div>
+    <div id="blur">
+    <div class="navbar">
+        <h1 id="logo">Budget <span>App</span></h1>
+        <button class="addBudgetbtn" id="addBudgetbtn">Add Budget</button>       
+    </div>
+    
+    <div class="container">
+       
+        <div class="add-expensives">
+            <h1>Expensives</h1>
+            <p class="hide"  id="catError">Please Enter Category</p>
+            <input type="text" id="addCategory" placeholder="Enter Category">
+            <p class="hide"  id="amountError">Please Enter Cost</p>
+            <input type="number" id="catExpense" placeholder="Enter cost">
+            <button id="chkBudget">Check budget</button>
+        </div>
+    </div>
+    <div class="callist">
+    <div class="cal-listing">
+        <div>
+            <p>Total budget</p>
+            <span id="totalBudget">0</span>
+        </div>
+        <div>
+            <p>Expenses</p>
+            <span id="expenditureVal">0</span>
+        </div>
+        <div>
+            <p>Balance</p>
+            <span id="balance">0</span>
+        </div>
+    </div>
+</div>
+<div class="date" id="date"></div>
+<div class="list">
+    <h3>Expense List</h3>
+    <div class="list-items" id="list-items">
+        <ul class="listing" id="listing">
+            
+            <!-- <li con>fdgdfg <div><span contenteditable="true">ada</span><button id="delBtn"><i class="fa fa-trash-o" ></i></button></div></li> -->
+        </ul>
+    </div>
+</div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>

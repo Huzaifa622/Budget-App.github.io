@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #070606;
+    color: #F8F9F9;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+}
+#logo{
+    margin: 12px;
+    
+}
+.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.5;
+}
+
+#logo span{
+color: rgb(240, 90, 90);
+}
+.addBudgetbtn{
+    background: #070606;
+    border: 1px solid rgb(240, 90, 90);
+    color: #F8F9F9;
+    margin: 15px;
+    padding: 12px;
+    border-radius: 24px;
+}
+.addBudgetbtn:hover{
+    background: rgb(240, 90, 90);
+    border: 2px solid #070606;
+    cursor: pointer;
+}
+.popup{
+    width: 400px;
+    height: 230px;
+    position: absolute;
+    background: #070606;
+   top: 0%;
+   left: 50%;
+    /* box-shadow: 0 0 10px #F8F9F9; */
+    transform: translate(-50%,-50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s ;
+   
+}
+.hide{
+    color: red;
+    font-size: 12px;
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+.open-popup{
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+}
+.budgetform{
+   margin: 30px;
+   
+}
+.budgetform h1{
+    margin-bottom: 24px;
+}
+.budgetform input{
+    display: block;
+    padding: 6px;
+    width: 100%;
+    margin-bottom: 12px;
+    border: 1px solid #070606;
+    outline: none;
+    border-radius: 6px;
+}
+.budgetform .addBudget{
+    padding: 6px 16px;
+    border-radius: 16px;
+    background: #070606;
+    border: 1px solid rgb(240, 90, 90);
+    color: #F8F9F9;
+}
+.budgetform .addBudget:hover{
+    background: rgb(240, 90, 90);
+    border: 2px solid #070606;
+    cursor: pointer;
+}
+
+.budgetform input:focus{
+    border: 1px solid rgb(240, 90, 90);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    align-items: center;
+    
+}
+
+.add-expensives{ 
+    margin: 100px 250px;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+.add-expensives input{
+    padding: 6px;
+    width: 90%;
+display: block;
+border: 1px solid #070606;
+outline: none;
+border-radius: 6px;
+}
+.add-expensives h1{
+    margin-bottom: 24px;
+}
+.add-expensives button{
+    margin-top: 12px;
+    padding: 6px 16px;
+    background: #070606;
+    border: 1px solid rgb(240, 90, 90);
+    color: #F8F9F9;
+    border-radius: 16px;
+}
+.add-expensives button:hover{
+background: rgb(240, 90, 90);
+border: 1px solid #070606;
+cursor: pointer;
+}
+.add-expensives input:focus{
+    border: 1px solid rgb(240, 90, 90);
+}
+.callist{
+display: flex;
+justify-content: space-around;
+height: 100px;
+}
+.cal-listing{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px;
+    background: rgb(240, 90, 90);
+    border-radius: 5px;
+    
+}
+.cal-listing div span{
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+}
+.date{
+    margin: 0px 40px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.list{
+    margin: 10px 30px;
+    padding: 30px;
+    padding-bottom: 35px;
+    border-radius: 5px;
+    border: 2px solid #F8F9F9;
+}
+
+.listing li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px;
+    padding: 24px;
+    background: rgb(240, 90, 90);
+    border-radius: 5px;
+}
+.listing li button{
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 30px;
+    outline: none;
+    border:2px solid rgb(240, 90, 90);
+    background: rgb(240, 90, 90)
+}
+.listing li span{
+    margin: 40px;
+}
+.fa-trash-o{
+    font-size: 24px;
+}
