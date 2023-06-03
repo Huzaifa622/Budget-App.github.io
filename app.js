@@ -24,7 +24,11 @@ let year = time.getFullYear();
 
 let myDate = `${month} ${day} ${year}`;
 date.innerText = myDate;
-console.log(myDate)
+
+addBudgetbtn.addEventListener('click', ()=>{
+    popup.classList.add('open-popup');
+    blurr.classList.add('active');
+});
 let tempAmount = 0;
 Budgetbtn.addEventListener('click', ()=> {
     
@@ -41,10 +45,6 @@ Budgetbtn.addEventListener('click', ()=> {
     budgtvalue.value = "";
 });
 
-addBudgetbtn.addEventListener('click', ()=>{
-    popup.classList.add('open-popup');
-    blurr.classList.add('active');
-});
 let category = "";
 let expPrize = [];
 chkBudget.addEventListener('click', ()=>{
