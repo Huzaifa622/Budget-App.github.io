@@ -89,25 +89,40 @@ expList();
 
 
 function expList(){
-    const myDiv = document.createElement('li');
+    const myLi = document.createElement('li');
     expPrize.forEach((exp)=>{
         
-        myDiv.innerHTML = '';
-        myDiv.id = `${exp.id}`;
-        myDiv.innerHTML = `<div>${exp.catName}</div> <div><span>${exp.cost}</span><button class="delBtn" id="${exp.id}"><i class="fa fa-trash-o" ></i></button></div>`;
-        listing.appendChild(myDiv);
-        const delBtn = myDiv.querySelector('.delBtn');
+        myLi.innerHTML = '';
+        myLi.id = `${exp.id}`;
+        myLi.innerHTML = `<div>${exp.catName}</div> <div><span>Rs.${exp.cost}</span><button class="editBtn" id="${exp.id}"><i class="fa fa-pencil-square-o"></i><button><button class="delBtn" id="${exp.id}"><i class="fa fa-trash-o" ></i></button></div>`;
+        listing.appendChild(myLi);
+        const delBtn = myLi.querySelector('.delBtn');
+        const editBtn = myLi.querySelector('.editBtn');
+        
         
         delBtn.addEventListener('click', () => {
            deleteExp(exp.id);
-            myDiv.remove();
+            myLi.remove();
+         
         
-        })
+        });
+       editBtn.addEventListener('click', ()=>{
+        const newName = prompt('Enter Name');
+        if(newName){
+            expEdit(exp.id, newName);
+            myLi.querySelector('div').innerText = newName;
+    }
+});
         
-    })
-    
+    });
 };
  deleteExp = (id) => {
     expPrize = expPrize.filter(exp => exp.id !== id);
+    
 }
-
+expEdit = (id, name) =>{
+const exp = expPrize.find(exp => exp.id === id);
+if(exp){
+exp.catName = name;
+};
+}
