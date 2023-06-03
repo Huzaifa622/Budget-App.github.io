@@ -83,12 +83,13 @@ else if(remainingBalance >=0){
     amountError.classList.remove('show');
     expenditureVal.innerText = totalCost;
     balance.innerText = remainingBalance;
+    expList();
    
+    addCategory.value = "";
+        catExpense.value = "";
 }
-addCategory.value = "";
-    catExpense.value = "";
 
-expList();
+
 
 });
 
