@@ -1,15 +1,15 @@
 let popup = document.getElementById('popup');
 let blurr = document.getElementById('blur');
+let budgtvalue = document.getElementById('budgtvalue');
+let addCategory = document.getElementById('addCategory');
+let catExpense = document.getElementById('catExpense');
 const Budgetbtn = document.getElementById('addBudget');
-const budgtvalue = document.getElementById('budgtvalue');
 const budgetAmountError = document.getElementById('budgetAmountError');
 const addBudgetbtn = document.getElementById('addBudgetbtn');
 const totalBudget = document.getElementById('totalBudget');
 const expenditureVal = document.getElementById('expenditureVal');
 const date = document.getElementById('date');
 const balance = document.getElementById('balance');
-const addCategory = document.getElementById('addCategory');
-const catExpense = document.getElementById('catExpense');
 const chkBudget = document.getElementById('chkBudget');
 const catError = document.getElementById('catError');
 const amountError = document.getElementById('amountError');
@@ -38,6 +38,7 @@ Budgetbtn.addEventListener('click', ()=> {
     popup.classList.remove('open-popup');
     blurr.classList.remove('active');
     }
+    budgtvalue.value = "";
 });
 
 addBudgetbtn.addEventListener('click', ()=>{
@@ -54,6 +55,7 @@ chkBudget.addEventListener('click', ()=>{
         cost: Number(catExpense.value)
     }
     expPrize.push({...value});
+    
     console.log(expPrize)
     let totalCost = 0;
     
@@ -81,7 +83,10 @@ else if(remainingBalance >=0){
     amountError.classList.remove('show');
     expenditureVal.innerText = totalCost;
     balance.innerText = remainingBalance;
+   
 }
+addCategory.value = "";
+    catExpense.value = "";
 
 expList();
 
